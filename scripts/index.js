@@ -16,3 +16,5 @@ function displayRecipe(inputArray) {
 
 // Affichage des recettes initiales
 displayRecipe(recipes);
+
+

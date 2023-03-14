@@ -106,10 +106,21 @@ function displayFilteredRecipes() {
   const searchDeviceTag = document.getElementById("devices");
   const searchUstensilTag = document.getElementById("ustensils");
 
-  searchIngredientTag.addEventListener("input", filterIngredients);
-  searchDeviceTag.addEventListener("input", filterDevices);
-  searchUstensilTag.addEventListener("input", filterUstensils);
-  
+  // searchIngredientTag.addEventListener("input", filterIngredients);
+  // searchDeviceTag.addEventListener("input", filterDevices);
+  // searchUstensilTag.addEventListener("input", filterUstensils);
+  searchIngredientTag.addEventListener("input", () => {
+    filterIngredients();
+    globalSearch(); // Ajoutez cet appel ici
+  });
+  searchDeviceTag.addEventListener("input", () => {
+    filterDevices();
+    globalSearch(); // Ajoutez cet appel ici
+  });
+  searchUstensilTag.addEventListener("input", () => {
+    filterUstensils();
+    globalSearch(); // Ajoutez cet appel ici
+  });
 
   function filterIngredients() {
     // Récupération de la valeur saisie dans le champ de recherche
@@ -188,4 +199,4 @@ function displayFilteredRecipes() {
     });
   }
 }
-
+displayFilteredRecipes()
