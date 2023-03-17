@@ -2,51 +2,50 @@
 <html lang="fr">
   <head>
     <title>Les petits plats</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Lato:wght@400;700&family=Roboto&display=swap"
       rel="stylesheet"
-    />
+   >
   </head>
   <body>
     <!--header-->
-
     <header>
-      <img src="./assets/logo.png" alt="Logo du site" />
+      <img src="./assets/logo.png" alt="Logo du site">
     </header>
+    <h1 class="visually-hidden">Les petits plats - Recherche de recettes</h1>
     <!--fin de header-->
-
     <!--main-->
     <main id="main">
       <!--section search-->
-      <section class="search_section">
+      <section class="search_section" aria-labelledby="search-label">
+        <h2 id="search-label" class="visually-hidden">Recherche de recettes</h2>
         <label for="search">test de la phrase d'erreur</label>
         <input
           type="search"
           class="search_text"
           id="search"
           name="search"
-          placeholder="Rechercher une recette"
-        />
+          placeholder="Rechercher une recette">
         <button class="searchBtn">
-          <img src="./assets/search.png" alt="Loupe de recherche" />
+          <img src="./assets/search.png" alt="Loupe de recherche">
         </button>
       </section>
       <!--fin de section search-->
       <p class="search_error">Veuillez entrer au minimum 3 caractères svp...</p>
-
       <!--section tags-->
-      <section class="input_tags">
+      <section class="input_tags" aria-labelledby="filter-tags-label">
+        <h2 id="filter-tags-label" class="visually-hidden">Filtrer par tags</h2>
         <div class="filter_tags"></div>
         <div class="tags_input">
           <!--input ingredients-->
           <div class="margin_tags">
             <div class="tag ingredient_input">
-              <label for="ingredients"></label>
+              <label for="ingredients">Ingrédients</label>
               <input
                 type="text"
                 class="tag_text dev"
@@ -54,22 +53,19 @@
                 name="ingredients"
                 placeholder="Ingrédients"
                 required
-                minlength="3"
-              />
+                minlength="3">
               <img
                 src="./assets/up.png"
                 class="down_button down_ingredients"
-                alt="Flêche"
-              />
+                alt="Flêche">
             </div>
             <div class="ingredients_list none"></div>
           </div>
           <!--fin de input ingredients-->
-
           <!--input devices-->
           <div class="margin_tags">
             <div class="tag device_input">
-              <label for="devices"></label>
+              <label for="devices">Appareils</label>
               <input
                 type="text"
                 class="tag_text dev"
@@ -77,22 +73,19 @@
                 name="devices"
                 placeholder="Appareils"
                 required
-                minlength="3"
-              />
+                minlength="3">
               <img
                 src="./assets/up.png"
                 class="down_button down_devices"
-                alt="Flêche"
-              />
+                alt="Flêche">
             </div>
             <div class="devices_list none"></div>
           </div>
           <!--fin de input devices-->
-
           <!--input ustensils-->
           <div class="margin_tags">
             <div class="tag ustensil_input">
-              <label for="ustensils"></label>
+              <label for="ustensils">Ustensiles</label>
               <input
                 type="text"
                 class="tag_text dev"
@@ -100,13 +93,11 @@
                 name="ustensils"
                 placeholder="Ustensiles"
                 required
-                minlength="3"
-              />
+                minlength="3">
               <img
                 src="./assets/up.png"
                 class="down_button down_ustensils"
-                alt="Flêche"
-              />
+                alt="Flêche">
             </div>
             <div class="ustensils_list none"></div>
           </div>
@@ -116,14 +107,19 @@
       <!--fin de section tags-->
 
       <!--code js-->
-      <section class="cards"></section>
+      <section class="cards" aria-labelledby="recipe-cards-label">
+        <h2 id="recipe-cards-label" class="visually-hidden">
+          Liste des recettes
+        </h2>
+      </section>
       <section class="error_research">
+        <h2 class="visually-hidden">hidden</h2>
+
         <p class="error_research--para">
           Aucune recette ne correspond à votre critère… vous pouvez chercher «
           tarte aux pommes », « poisson », etc
         </p>
       </section>
-
       <!--fin de code js-->
     </main>
     <!--fin de main-->
@@ -135,8 +131,5 @@
     <script src="scripts/research.js"></script>
     <script src="scripts/inputTags.js"></script>
     <script src="scripts/tags.js"></script>
-    <!-- <script src="./scripts/search.js"></script>
-    <script src="./scripts/tagsModal.js"></script>
-    fin de js files-->
   </body>
 </html>
