@@ -138,7 +138,6 @@ searchInput.addEventListener("input", () => {
     document.querySelector(".search_error").style.display = "block";
   }
   // Si la longueur du texte est égale à 0, affiche les recettes d'origine et masque les messages d'erreur "search_error" et "error_research"
-  // Si la longueur du texte est égale à 0, affiche les recettes d'origine et masque les messages d'erreur "search_error" et "error_research"
   if (searchInput.value.length === 0) {
     displayRecipe(recipes);
     document.querySelector(".search_error").style.display = "none";

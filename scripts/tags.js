@@ -33,6 +33,7 @@ function createTag(element) {
       // Récupération de la liste des ingrédients
       modalbg = document.querySelector(".ingredients_list");
       placeholder = document.getElementsByName("ingredients")[0];
+      console.log("🚀 ~ file: tags.js:36 ~ createTag ~ placeholder:", placeholder)
       break;
     case "appliance":
       // Définition de la catégorie de l'élément div en tant qu'appareil
@@ -73,6 +74,7 @@ function createTag(element) {
 }
 
 const allIngredients = document.querySelectorAll(".ingredient_tag");
+console.log("🚀 ~ file: tags.js:77 ~ allIngredients:", allIngredients)
 const allDevices = document.querySelectorAll(".device_tag");
 const allUstensils = document.querySelectorAll(".ustensil_tag");
 
@@ -89,6 +91,7 @@ function displayRecipeFilter() {
   
     // Sélectionner tous les éléments ayant la classe "tags"
     let allTags = document.querySelectorAll(".tags");
+    console.log("🚀 ~ file: tags.js:93 ~ displayRecipeFilter ~ allTags:", allTags)
     
     // Filtrer les recettes en utilisant la méthode filter()
     inputRecipeaArray = recipes.filter((recipe) => {
